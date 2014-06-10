@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src="userNavigation.js"></script>
+</head>
+<body>
+<style>
+
+    .user-panel {
+        list-style-image: none;
+        position: relative;
+        padding: 100px 0 0;
+        margin: 0;
+        border: 1px solid gold;
+    }
+
+    .user-panel-item {
+        display: inline-block;
+        width: 100px;
+        height: 60px;
+        padding: 20px;
+        margin: 0 15px;
+        border: 1px solid black;
+    }
+    .user-panel-item-current {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background: #ccc;
+        color: red;
+    }
+
+</style>
+
+<div ng-controller="userNavigationPanel">
+    <input ng-model="query" />
+    <ul class="user-panel">
+        <li ng-repeat="user in users| filter:query " ng-class="{'user-panel-item-current' : user.isCurrent}"
+                ng-click="setCurrent(user)" class="user-panel-item">
+            {{user.name}}
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+</body>
+</html>
