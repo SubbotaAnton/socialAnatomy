@@ -1,0 +1,23 @@
+.user-panel {
+    list-style-image: none;
+    position: relative;
+    padding: 100px 0 0;
+    margin: 0;
+    border: 1px solid gold;
+}
+
+.user-panel-item {
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    padding: 20px;
+    margin: 0 15px;
+    border: 1px solid black;
+}
+.user-panel-item-current {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: #ccc;
+    color: red;
+}
